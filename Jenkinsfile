@@ -1,8 +1,8 @@
 pipeline {
     agent any
     parameters{
-        choice(name: 'VERSION',choices: ['1.10','1.20','1.30'],description: '')
-        booleanParam (name: 'execute',defaultValue: true,description: '')
+        choice(name: 'VERSION', choices: ['1.10', '1.20', '1.30'], description: '')
+        booleanParam (name: 'execute', defaultValue: true, description: '')
     }
 
     stages {
@@ -16,7 +16,7 @@ pipeline {
  stage('test') {
      when{
          expression{
-             params.excute
+             params.execute
          }
      }
     
