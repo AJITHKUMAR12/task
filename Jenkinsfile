@@ -5,7 +5,7 @@ pipeline {
         stage('Build') {
             when{
                 expression{
-                     BRANCH_NAME == 'master'
+                    // BRANCH_NAME == 'master'
                     echo 'tset pass'
                 }
                 
