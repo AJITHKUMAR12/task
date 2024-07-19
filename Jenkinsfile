@@ -9,6 +9,9 @@ pipeline {
                     environment name: 'BRANCH_NAME', value: 'master'
                     echo 'tset pass'
                 }
+                 steps {
+                echo 'checking the application'
+            }
                 
             }
             steps {
