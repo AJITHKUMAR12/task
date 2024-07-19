@@ -6,6 +6,7 @@ pipeline {
             when{
                 expression{
                      BRANCH_NAME == 'main'
+                    echo 'tset pass'
                 }
                 
             }
@@ -14,6 +15,13 @@ pipeline {
             }
         }
  stage('test') {
+     when{
+                expression{
+                     BRANCH_NAME == 'master'
+                    echo 'test pass'
+                }
+                
+            }
             steps {
                 echo 'testing the application'
             }
