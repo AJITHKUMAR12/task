@@ -6,6 +6,7 @@ pipeline {
             when{
                 expression{
                     // BRANCH_NAME == 'master'
+                    environment name: 'BRANCH_NAME', value: 'master'
                     echo 'tset pass'
                 }
                 
